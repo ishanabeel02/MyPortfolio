@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #333;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Home Section */
+#home {
+    flex-grow: 1; /* Pushes the content to be properly aligned */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #341387a5;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #100237;
+    transform: scale(1.1);
+}
+
+/* Typing Effect */
+.typing {
+    font-size: 2.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Blinking Cursor */
+.typing::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+/* Skills Section */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between columns */
+    width: 90%;
+    margin: 20px auto;
+}
+.skill {
+    text-align: left;
+}
+.bar {
+    width: 100%;
+    background: #444;
+    height: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.fill {
+    height: 100%;
+    text-align: right;
+    padding-right: 10px;
+    color: black;
+    font-weight: bold;
+    line-height: 25px;
+}
+.cpp { width: 80%; background: #4285F4; }  /* C++ - Blue */
+.python { width: 60%; background: #FFD43B; }  /* Python - Yellow */
+.sql { width: 60%; background: #FF5733; }  /* SQL - Red */
+.asm { width: 40%; background: #9C27B0; }  /* Assembly - Purple */
+
+/* Responsive */
+@media (max-width: 600px) {
+    .skills {
+        grid-template-columns: 1fr; /* Stack bars on small screens */
+    }
+}
+
+/* Project Grid */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+    margin-top: 100px; /* Adjust based on navbar height */
+    margin-top: 80px;
+}
+
+.project {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+.project h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.project p {
+    font-size: 1rem;
+    color: #ddd;
+}
+.github-link {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.github-link img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* Makes it white */
+    transition: transform 0.3s ease-in-out;
+}
+.github-link img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive - Stack projects in one column on small screens */
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+#contact {
+    text-align: center;
+    padding: 50px 30px;
+    background: #f8f9faa1;
+}
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("src/phony.jpg") center/cover no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.ab{
+    color: #ffffff;
+    font-size: xx-large;
+}
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.1);
+}
+
+.contact-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.contact-item img:hover {
+    transform: scale(1.2);
+}
+
+.contact-item span {
+    font-size: 1rem;
+    font-weight: bold;
+}

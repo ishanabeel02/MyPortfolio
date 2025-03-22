@@ -1,0 +1,48 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Isha</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Hi, I am Isha Nabeel <br> AI Engineer";
+            const typingElement = document.querySelector(".typing");
+            let index = 0;
+        
+            function type() {
+                if (index < text.length) {
+                    typingElement.innerHTML = text.slice(0, index + 1);
+                    index++;
+                    setTimeout(type, 100);
+                }
+            }
+        
+            type();
+        });
+        </script>
+        
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="src/about1.html">About</a></li>
+                <li><a href="src/projects.html">Projects</a></li>
+                <li><a href="src/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h1 class="typing">Hi, I am Isha<br>AI Engineer</h1>
+        <a href="src/resume1.pdf" download class="btn">Download Resume</a>
+
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
