@@ -239,3 +239,101 @@ p {
     font-size: 1rem;
     font-weight: bold;
 }
+/* Mobile Phones - General Fixes */
+@media screen and (max-width: 768px) {
+    /* ✅ Center "Hi, I am Isha Nabeel" properly */
+    .intro-text {
+        text-align: center; 
+        font-size: 22px; /* Adjust for better visibility */
+        margin-top: 50px; /* Move it down if navbar overlaps */
+    }
+
+    /* ✅ Fix Navbar (Prevent Overlapping & Ensure Proper Spacing) */
+    .navbar {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; 
+        padding: 10px;
+        position: fixed; /* Keep it in place */
+        width: 100%;
+        z-index: 1000;
+    }
+
+    /* ✅ Fix Navbar Title Size */
+    .navbar-title {
+        font-size: 18px; /* Reduce size for smaller screens */
+        font-weight: bold;
+    }
+
+    /* ✅ Fix Project Boxes (Reduce Font & Size) */
+    .project-box {
+        width: 90%; /* Reduce width */
+        height: auto; /* Allow it to adjust */
+        font-size: 14px; /* Reduce font size */
+        padding: 10px;
+    }
+
+    /* ✅ Fix "About Me" Section */
+    .about-section {
+        padding-top: 100px; /* Push it down to avoid getting cut by navbar */
+    }
+    
+    /* ✅ Ensure "About Me" Text is Fully Visible */
+    .about-title {
+        font-size: 22px; /* Adjust size */
+        margin-top: 20px; /* Space from navbar */
+    }
+}
+/* ✅ Mobile Phones - General Fix */
+@media screen and (max-width: 768px) {
+    /* ✅ Fix Navbar */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Ensure navbar is visible */
+        z-index: 1000;
+    }
+
+    /* ✅ Navbar Text (Reduce Size) */
+    .navbar-title {
+        font-size: 16px; /* Reduce title size */
+        font-weight: bold;
+    }
+
+    /* ✅ Center "Hi, I am Isha Nabeel" Properly */
+    .intro-text {
+        text-align: center;
+        font-size: 20px; /* Adjust for better visibility */
+        margin: 100px auto 20px; /* Ensure space from navbar */
+        width: 90%;
+    }
+
+    /* ✅ Fix Project Boxes (Reduce Font & Adjust Width) */
+    .project-box {
+        width: 85%; /* Reduce width to avoid stretching */
+        height: auto; /* Adjust height dynamically */
+        font-size: 14px; /* Reduce text size */
+        padding: 10px;
+        margin: 10px auto; /* Center the boxes */
+    }
+
+    /* ✅ Ensure "About Me" Text is Fully Visible */
+    .about-section {
+        padding-top: 120px; /* Push it down to avoid overlap */
+    }
+
+    /* ✅ Fix "About Me" Title */
+    .about-title {
+        font-size: 22px; /* Adjust size */
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+
