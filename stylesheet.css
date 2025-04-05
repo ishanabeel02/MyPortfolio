@@ -278,11 +278,11 @@ p {
         align-items: center;
         height: 100vh;
         padding: 20px;
-        width: 100vh;
+        width: 50vh;
     }
 
     .typing {
-        font-size: 20px; 
+        font-size: 30px; 
         text-wrap:inherit;
         width: 90%;
         line-height: 1.5;
