@@ -252,7 +252,7 @@ p {
         padding: 10px 0;
         position: fixed;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.9); 
+        background-color: rgba(41, 39, 39, 0.9); 
         z-index: 1000;
     }
 
@@ -270,7 +270,7 @@ p {
     nav ul li a {
         font-size: 16px; 
     }
-    #home {
+    /* #home {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -279,15 +279,29 @@ p {
         height: 100vh;
         padding: 20px;
         width: 50vh;
+    } */
+    #home {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+        width: 90%;  /* Use 90% instead of 50vh */
+        max-width: 500px; /* Optional: limit max width */
     }
-
+    
     .typing {
         font-size: 30px; 
         text-wrap:inherit;
         width: 90%;
         line-height: 1.5;
     }
-
+    body, html {
+        overflow-x: hidden;
+    }
+    
     
     .btn {
         padding: 10px 20px;
